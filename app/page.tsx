@@ -5,6 +5,7 @@ import Projects from "@/components/sections/projects";
 import Experience from "@/components/sections/experience";
 import Stack from "@/components/sections/stack";
 import Contact from "@/components/sections/contact";
+import WhatsAppContact from "@/components/sections/whatsapp-contact";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <Projects />
       <Experience />
       <Stack />
-      <Contact />
+      <WhatsAppContact />
     </main>
   );
 }
