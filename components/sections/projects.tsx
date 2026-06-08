@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 
@@ -45,11 +45,23 @@ export default function Projects() {
     null | (typeof projects)[0]
   >(null);
 
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) =>
+        prev === projects.length - 1 ? 0 : prev + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <section
         id="projects"
-        className="max-w-6xl mx-auto px-6 py-32"
+        className="max-w-6xl mx-auto px-6 py-24 md:py-32"
       >
         <div className="mb-16">
           <p className="text-blue-400 text-sm mb-4">
@@ -61,32 +73,49 @@ export default function Projects() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="relative overflow-hidden">
 
-          {projects.map((project) => (
+          <AnimatePresence mode="wait">
+
             <motion.div
-              key={project.title}
-              whileHover={{ y: -5 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => setSelectedProject(project)}
-              className="group cursor-pointer text-left rounded-3xl border border-white/10 bg-white/[0.03] p-8 hover:bg-white/[0.06] hover:border-white/20 transition-all duration-300"
+              key={current}
+              initial={{
+                opacity: 0,
+                x: 80,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+              }}
+              exit={{
+                opacity: 0,
+                x: -80,
+              }}
+              transition={{
+                duration: 0.45,
+                ease: "easeOut",
+              }}
+              onClick={() =>
+                setSelectedProject(projects[current])
+              }
+              className="group cursor-pointer rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
             >
 
-              <div className="h-44 rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 mb-8 border border-white/5" />
+              <div className="h-56 rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 mb-8 border border-white/5" />
 
-              <h3 className="text-2xl font-semibold mb-4">
-                {project.title}
+              <h3 className="text-3xl font-semibold mb-4">
+                {projects[current].title}
               </h3>
 
-              <p className="text-zinc-400 leading-relaxed mb-6">
-                {project.description}
+              <p className="text-zinc-400 leading-relaxed text-lg mb-8 max-w-3xl">
+                {projects[current].description}
               </p>
 
-              <div className="flex flex-wrap gap-2">
-                {project.stack.map((tech) => (
+              <div className="flex flex-wrap gap-3">
+                {projects[current].stack.map((tech) => (
                   <div
                     key={tech}
-                    className="px-3 py-1 rounded-lg bg-black/30 border border-white/10 text-sm text-zinc-300"
+                    className="px-4 py-2 rounded-xl bg-black/30 border border-white/10 text-zinc-300"
                   >
                     {tech}
                   </div>
@@ -94,7 +123,24 @@ export default function Projects() {
               </div>
 
             </motion.div>
-          ))}
+
+          </AnimatePresence>
+
+          <div className="flex items-center justify-center gap-3 mt-8">
+
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrent(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  current === index
+                    ? "w-10 bg-white"
+                    : "w-2 bg-white/20"
+                }`}
+              />
+            ))}
+
+          </div>
 
         </div>
       </section>

@@ -2,18 +2,18 @@ import { Mail, ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center">
+    <section className="min-h-[85vh] flex items-center py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6 w-full">
         <div className="max-w-3xl">
           <p className="text-blue-400 font-medium mb-4">
             Full Stack Developer & AI Automation
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6">
             Ricardo González Ramos
           </h1>
 
-          <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-2xl">
+          <p className="text-zinc-400 text-lg md:text-xl leading-relaxed md:leading-loose max-w-2xl">
             Desarrollo aplicaciones modernas, automatizaciones
             e integraciones de inteligencia artificial utilizando
             tecnologías frontend, backend y móviles.
