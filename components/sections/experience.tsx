@@ -9,7 +9,7 @@ const experiences = [
   {
     company: "HackaTec",
     role: "Participante Nacional",
-    period: "2023",
+    period: "2024",
     description:
       "Desarrollo de proyecto de turismo inteligente basado en inteligencia artificial y experiencia de usuario.",
   },

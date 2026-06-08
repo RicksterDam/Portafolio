@@ -2,7 +2,7 @@ const stack = {
   Frontend: ["React", "Angular", "Next.js", "TailwindCSS"],
   Backend: ["Node.js", "Express", "PHP", "Python"],
   Mobile: ["Flutter", "Ionic", "Android Studio"],
-  Database: ["PostgreSQL", "MySQL", "SQLite"],
+  Database: ["PostgreSQL", "MySQL", "SQLite", "MongoDB"],
   Tools: ["Git", "Docker", "Postman", "REST APIs"],
 };
 
