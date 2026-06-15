@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 import hackatecImg from "@/lib/img/hackatec.jpg";
-import jatikImg from "@/lib/img/jatik.png";
+import abbitaImg from "@/lib/img/abbita.png";
 
 const experiences = [
   {
@@ -16,7 +16,7 @@ const experiences = [
     description:
       "Desarrollo de bots conversacionales, automatización de procesos empresariales, integraciones IA y personalización de CRM.",
 
-    image: jatikImg,
+    image: abbitaImg,
   },
 
   {
