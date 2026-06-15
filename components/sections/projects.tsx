@@ -5,6 +5,11 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 
+import Image from "next/image";
+
+import jatikImg from "@/lib/img/jatik.png";
+
+
 const projects = [
   {
     title: "Sistema CRM con IA",
@@ -26,6 +31,8 @@ const projects = [
       "Proyecto tecnológico presentado en HackaTec enfocado en turismo inteligente utilizando IA para mejorar recomendaciones y experiencia de usuario.",
 
     stack: ["Angular", "Python", "AI"],
+
+    image: jatikImg,
   },
 
   {
