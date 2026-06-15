@@ -1,47 +1,68 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+
+import hackatecImg from "@/lib/img/hackatec.jpg";
+import jatikImg from "@/lib/img/jatik.png";
 
 const experiences = [
   {
     company: "Abbita",
     role: "Automation & AI Developer",
     period: "2024 - Actualidad",
+
     description:
       "Desarrollo de bots conversacionales, automatización de procesos empresariales, integraciones IA y personalización de CRM.",
+
+    image: jatikImg,
   },
 
   {
     company: "HackaTec",
     role: "Participante Nacional",
     period: "2024",
+
     description:
       "Desarrollo de proyecto de turismo inteligente basado en inteligencia artificial y experiencia de usuario.",
+
+    image: hackatecImg,
   },
 ];
 
 export default function Experience() {
-  const [current, setCurrent] = useState(0);
+
+  const [current, setCurrent] =
+    useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) =>
-        prev === experiences.length - 1 ? 0 : prev + 1
-      );
-    }, 5000);
 
-    return () => clearInterval(interval);
+    const interval =
+      setInterval(() => {
+
+        setCurrent((prev) =>
+          prev === experiences.length - 1
+            ? 0
+            : prev + 1
+        );
+
+      }, 5000);
+
+    return () =>
+      clearInterval(interval);
+
   }, []);
 
   return (
+
     <section
       id="experience"
       className="max-w-6xl mx-auto px-6 py-24 md:py-32"
     >
 
       <div className="mb-16">
+
         <p className="text-blue-400 text-sm mb-4">
           Experiencia
         </p>
@@ -49,6 +70,7 @@ export default function Experience() {
         <h2 className="text-5xl font-bold">
           Experiencia profesional.
         </h2>
+
       </div>
 
       <div className="relative overflow-hidden">
@@ -76,44 +98,75 @@ export default function Experience() {
             className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
           >
 
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+
+              {/* TEXTO */}
 
               <div>
-                <h3 className="text-3xl font-semibold">
-                  {experiences[current].company}
-                </h3>
 
-                <p className="text-zinc-400 text-lg mt-2">
-                  {experiences[current].role}
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+
+                  <div>
+
+                    <h3 className="text-3xl font-semibold">
+                      {experiences[current].company}
+                    </h3>
+
+                    <p className="text-zinc-400 text-lg mt-2">
+                      {experiences[current].role}
+                    </p>
+
+                  </div>
+
+                  <div className="text-zinc-500 text-sm">
+                    {experiences[current].period}
+                  </div>
+
+                </div>
+
+                <p className="text-zinc-400 leading-relaxed text-lg">
+                  {experiences[current].description}
                 </p>
+
               </div>
 
-              <div className="text-zinc-500 text-sm">
-                {experiences[current].period}
+              {/* IMAGEN */}
+
+              <div className="relative w-full h-[300px] rounded-2xl overflow-hidden border border-white/10">
+
+                <Image
+                  src={experiences[current].image}
+                  alt={experiences[current].company}
+                  fill
+                  className="object-cover"
+                />
+
               </div>
 
             </div>
-
-            <p className="text-zinc-400 leading-relaxed text-lg max-w-4xl">
-              {experiences[current].description}
-            </p>
 
           </motion.div>
 
         </AnimatePresence>
 
+        {/* INDICADORES */}
+
         <div className="flex items-center justify-center gap-3 mt-8">
 
           {experiences.map((_, index) => (
+
             <button
               key={index}
-              onClick={() => setCurrent(index)}
+              onClick={() =>
+                setCurrent(index)
+              }
               className={`h-2 rounded-full transition-all duration-300 ${
                 current === index
                   ? "w-10 bg-white"
                   : "w-2 bg-white/20"
               }`}
             />
+
           ))}
 
         </div>
@@ -123,4 +176,3 @@ export default function Experience() {
     </section>
   );
 }
-
