@@ -73,30 +73,30 @@ export default function Experience() {
 
       </div>
 
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden h-full flex flex-col justify-between">
 
         <AnimatePresence mode="wait">
 
-          <motion.div
-            key={current}
-            initial={{
-              opacity: 0,
-              x: 80,
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-            }}
-            exit={{
-              opacity: 0,
-              x: -80,
-            }}
-            transition={{
-              duration: 0.45,
-              ease: "easeOut",
-            }}
-            className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
-          >
+<motion.div
+  key={current}
+  initial={{
+    opacity: 0,
+    x: 80,
+  }}
+  animate={{
+    opacity: 1,
+    x: 0,
+  }}
+  exit={{
+    opacity: 0,
+    x: -80,
+  }}
+  transition={{
+    duration: 0.45,
+    ease: "easeOut",
+  }}
+  className="h-full min-h-[435px] flex flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
+>
 
             <div className="grid md:grid-cols-2 gap-10 items-center">
 
