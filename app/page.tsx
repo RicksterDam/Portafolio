@@ -10,13 +10,26 @@ import WhatsAppContact from "@/components/sections/whatsapp-contact";
 export default function Home() {
   return (
     <main className="bg-[#0a0a0a] text-white">
+
       <Navbar />
+
       <Hero />
+
       <About />
-      <Projects />
-      <Experience />
+
+      {/* PROYECTOS + EXPERIENCIA */}
+      <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-10 items-start">
+
+        <Projects />
+
+        <Experience />
+
+      </div>
+
       <Stack />
+
       <WhatsAppContact />
+
     </main>
   );
 }

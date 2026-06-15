@@ -58,7 +58,7 @@ export default function Experience() {
 
     <section
       id="experience"
-      className="max-w-6xl mx-auto px-6 py-24 md:py-32"
+      className="w-full"
     >
 
       <div className="mb-16">
