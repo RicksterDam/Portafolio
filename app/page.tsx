@@ -18,11 +18,15 @@ export default function Home() {
       <About />
 
       {/* PROYECTOS + EXPERIENCIA */}
-      <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-10 items-start">
+      <div className="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
 
-        <Projects />
+        <div className="h-full">
+          <Projects />
+        </div>
 
-        <Experience />
+        <div className="h-full">
+          <Experience />
+        </div>
 
       </div>
 
