@@ -67,13 +67,13 @@ export default function Experience() {
           Experiencia
         </p>
 
-        <h2 className="text-5xl font-bold leading-tight">
+        <h2 className="text-5xl font-bold">
           Experiencia profesional.
         </h2>
 
       </div>
 
-      <div className="relative overflow-hidden h-full flex flex-col justify-between">
+      <div className="relative overflow-hidden">
 
         <AnimatePresence mode="wait">
 
@@ -95,15 +95,27 @@ export default function Experience() {
               duration: 0.45,
               ease: "easeOut",
             }}
-            className="min-h-[435px] rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
+            className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
           >
 
-            <div className="grid md:grid-cols-2 gap-8 items-center h-full">
+            <div className="space-y-8">
+
+              {/* IMAGEN */}
+              <div className="relative w-full h-[180px] rounded-2xl overflow-hidden border border-white/10">
+
+                <Image
+                  src={experiences[current].image}
+                  alt={experiences[current].company}
+                  fill
+                  className="object-cover"
+                />
+
+              </div>
 
               {/* TEXTO */}
-              <div className="flex-1 w-full">
+              <div>
 
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
 
                   <div>
 
@@ -117,7 +129,7 @@ export default function Experience() {
 
                   </div>
 
-                  <div className="text-zinc-500 text-sm whitespace-nowrap">
+                  <div className="text-zinc-500 text-sm">
                     {experiences[current].period}
                   </div>
 
@@ -126,18 +138,6 @@ export default function Experience() {
                 <p className="text-zinc-400 leading-relaxed text-lg">
                   {experiences[current].description}
                 </p>
-
-              </div>
-
-              {/* IMAGEN */}
-              <div className="relative w-full h-[260px] rounded-2xl overflow-hidden border border-white/10">
-
-                <Image
-                  src={experiences[current].image}
-                  alt={experiences[current].company}
-                  fill
-                  className="object-cover"
-                />
 
               </div>
 
