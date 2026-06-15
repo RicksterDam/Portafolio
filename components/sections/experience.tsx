@@ -98,7 +98,7 @@ export default function Experience() {
             className="min-h-[435px] rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
           >
 
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 h-full">
+            <div className="grid md:grid-cols-2 gap-8 items-center h-full">
 
               {/* TEXTO */}
               <div className="flex-1 w-full">
@@ -130,7 +130,7 @@ export default function Experience() {
               </div>
 
               {/* IMAGEN */}
-              <div className="relative w-full md:w-[220px] h-[260px] rounded-2xl overflow-hidden border border-white/10 flex-shrink-0">
+              <div className="relative w-full h-[260px] rounded-2xl overflow-hidden border border-white/10">
 
                 <Image
                   src={experiences[current].image}
