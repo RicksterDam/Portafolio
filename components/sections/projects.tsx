@@ -98,7 +98,7 @@ export default function Projects() {
     <>
       <section
         id="projects"
-        className="w-full"
+        className="h-full min-h-[520px] flex flex-col rounded-3xl border border-white/10 bg-white/[0.03] p-8 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
       >
 
         <div className="mb-16">
