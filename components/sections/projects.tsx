@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import jatikImg from "@/lib/img/jatik.png";
 import hackatecImg from "@/lib/img/hackatec.jpg";
+import misanadiImg from "@/lib/img/misanadi.jpg";
 
 const projects = [
   {
@@ -62,7 +63,7 @@ const projects = [
       "REST API",
     ],
 
-    image: jatikImg,
+    image: misanadiImg,
   },
 ];
 
