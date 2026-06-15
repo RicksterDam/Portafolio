@@ -59,7 +59,7 @@ export default function Experience() {
     <section
       id="experience"
       className="h-full px-6 py-24 md:py-32"
->
+    >
 
       <div className="mb-16">
 
@@ -67,7 +67,7 @@ export default function Experience() {
           Experiencia
         </p>
 
-        <h2 className="text-5xl font-bold">
+        <h2 className="text-5xl font-bold leading-tight">
           Experiencia profesional.
         </h2>
 
@@ -77,34 +77,33 @@ export default function Experience() {
 
         <AnimatePresence mode="wait">
 
-<motion.div
-  key={current}
-  initial={{
-    opacity: 0,
-    x: 80,
-  }}
-  animate={{
-    opacity: 1,
-    x: 0,
-  }}
-  exit={{
-    opacity: 0,
-    x: -80,
-  }}
-  transition={{
-    duration: 0.45,
-    ease: "easeOut",
-  }}
-  className="h-full min-h-[435px] flex flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
->
+          <motion.div
+            key={current}
+            initial={{
+              opacity: 0,
+              x: 80,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            exit={{
+              opacity: 0,
+              x: -80,
+            }}
+            transition={{
+              duration: 0.45,
+              ease: "easeOut",
+            }}
+            className="min-h-[435px] rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
+          >
 
-            <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 h-full">
 
               {/* TEXTO */}
+              <div className="flex-1 w-full">
 
-              <div>
-
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-8">
 
                   <div>
 
@@ -118,7 +117,7 @@ export default function Experience() {
 
                   </div>
 
-                  <div className="text-zinc-500 text-sm">
+                  <div className="text-zinc-500 text-sm whitespace-nowrap">
                     {experiences[current].period}
                   </div>
 
@@ -131,8 +130,7 @@ export default function Experience() {
               </div>
 
               {/* IMAGEN */}
-
-              <div className="relative w-full h-[300px] rounded-2xl overflow-hidden border border-white/10">
+              <div className="relative w-full md:w-[220px] h-[260px] rounded-2xl overflow-hidden border border-white/10 flex-shrink-0">
 
                 <Image
                   src={experiences[current].image}
