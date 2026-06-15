@@ -11,24 +11,7 @@ import hackatecImg from "@/lib/img/hackatec.jpg";
 import misanadiImg from "@/lib/img/misanadi.jpg";
 
 const projects = [
-  {
-    title: "Sistema CRM con IA",
 
-    description:
-      "Automatización de atención al cliente mediante bots conversacionales e integraciones inteligentes.",
-
-    longDescription:
-      "Sistema CRM desarrollado para automatizar procesos de atención al cliente mediante inteligencia artificial, integraciones API y gestión empresarial.",
-
-    stack: [
-      "React",
-      "Node.js",
-      "OpenAI",
-      "PostgreSQL",
-    ],
-
-    image: hackatecImg,
-  },
 
   {
     title: "HackaTec Turismo Inteligente",
