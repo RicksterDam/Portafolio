@@ -107,7 +107,7 @@ export default function Experience() {
                   src={experiences[current].image}
                   alt={experiences[current].company}
                   fill
-                  className="object-contain bg-white"
+                  className="object-cover"
                 />
 
               </div>
