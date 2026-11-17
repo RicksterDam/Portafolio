@@ -1,3 +1,5 @@
+import { site } from "@/lib/site";
+
 export default function Contact() {
   return (
     <section
@@ -20,26 +22,33 @@ export default function Contact() {
       <div className="flex flex-wrap justify-center gap-4">
 
         <a
-          href="mailto:ricardogonzalez040103@gmail.com"
+          href={`mailto:${site.email}`}
           className="bg-white text-black px-6 py-3 rounded-2xl font-medium hover:opacity-90 transition"
         >
           Enviar correo
         </a>
 
-        <a
-          href="https://github.com/"
-          target="_blank"
-          className="border border-white/10 px-6 py-3 rounded-2xl hover:bg-white/10 transition"
-        >
-          GitHub
-        </a>
+        {site.github && (
+          <a
+            href={site.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-white/10 px-6 py-3 rounded-2xl hover:bg-white/10 transition"
+          >
+            GitHub
+          </a>
+        )}
 
-        <a
-          href="#"
-          className="border border-white/10 px-6 py-3 rounded-2xl hover:bg-white/10 transition"
-        >
-          LinkedIn
-        </a>
+        {site.linkedin && (
+          <a
+            href={site.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-white/10 px-6 py-3 rounded-2xl hover:bg-white/10 transition"
+          >
+            LinkedIn
+          </a>
+        )}
 
       </div>
     </section>

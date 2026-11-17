@@ -1,4 +1,5 @@
 import { Mail, ArrowUpRight } from "lucide-react";
+import { site } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -20,30 +21,37 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 mt-10">
-            <a
-              href="https://github.com/"
-              target="_blank"
-              className="flex items-center gap-2 bg-white text-black px-5 py-3 rounded-xl font-medium hover:opacity-90 transition"
-            >
-              GitHub
-              <ArrowUpRight size={18} />
-            </a>
+            {site.github && (
+              <a
+                href={site.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white text-black px-5 py-3 rounded-xl font-medium hover:opacity-90 transition"
+              >
+                GitHub
+                <ArrowUpRight size={18} />
+              </a>
+            )}
 
             <a
-              href="mailto:ricardogonzalez040103@gmail.com"
+              href={`mailto:${site.email}`}
               className="flex items-center gap-2 border border-zinc-800 px-5 py-3 rounded-xl hover:bg-zinc-900 transition"
             >
               <Mail size={18} />
               Contacto
             </a>
 
-            <a
-              href="#"
-              className="flex items-center gap-2 border border-zinc-800 px-5 py-3 rounded-xl hover:bg-zinc-900 transition"
-            >
-              LinkedIn
-              <ArrowUpRight size={18} />
-            </a>
+            {site.linkedin && (
+              <a
+                href={site.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 border border-zinc-800 px-5 py-3 rounded-xl hover:bg-zinc-900 transition"
+              >
+                LinkedIn
+                <ArrowUpRight size={18} />
+              </a>
+            )}
           </div>
         </div>
       </div>

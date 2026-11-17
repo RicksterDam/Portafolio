@@ -11,41 +11,25 @@ import {
   SiFlutter,
   SiTypescript,
   SiPostgresql,
+  SiNextdotjs,
+  SiSupabase,
+  SiAnthropic,
+  SiMysql,
 } from "react-icons/si";
 
 const technologies = [
-  {
-    name: "React",
-    icon: <FaReact />,
-  },
-  {
-    name: "Angular",
-    icon: <FaAngular />,
-  },
-  {
-    name: "Node.js",
-    icon: <FaNodeJs />,
-  },
-  {
-    name: "Flutter",
-    icon: <SiFlutter />,
-  },
-  {
-    name: "Python",
-    icon: <FaPython />,
-  },
-  {
-    name: "TypeScript",
-    icon: <SiTypescript />,
-  },
-  {
-    name: "PostgreSQL",
-    icon: <SiPostgresql />,
-  },
-  {
-    name: "Docker",
-    icon: <FaDocker />,
-  },
+  { name: "React", icon: <FaReact /> },
+  { name: "Next.js", icon: <SiNextdotjs /> },
+  { name: "TypeScript", icon: <SiTypescript /> },
+  { name: "Node.js", icon: <FaNodeJs /> },
+  { name: "Angular", icon: <FaAngular /> },
+  { name: "Flutter", icon: <SiFlutter /> },
+  { name: "Python", icon: <FaPython /> },
+  { name: "PostgreSQL", icon: <SiPostgresql /> },
+  { name: "MySQL", icon: <SiMysql /> },
+  { name: "Supabase", icon: <SiSupabase /> },
+  { name: "Docker", icon: <FaDocker /> },
+  { name: "IA (Claude/OpenAI)", icon: <SiAnthropic /> },
 ];
 
 export default function About() {
