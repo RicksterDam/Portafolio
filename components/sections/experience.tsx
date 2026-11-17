@@ -22,7 +22,7 @@ const experiences: Experience[] = [
   {
     company: "Abbita Inmobiliaria",
     role: "Automation & AI Developer",
-    period: "2024 - Actualidad",
+    period: "Nov. 2025 - Actualidad",
     description:
       "Desarrollo del sitio web y panel administrativo, bots conversacionales con IA para WhatsApp, automatización de procesos e integraciones con el CRM Kommo.",
     image: abbitaImg,
