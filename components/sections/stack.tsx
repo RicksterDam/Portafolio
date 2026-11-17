@@ -22,14 +22,12 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiJavascript,
-  SiVite,
   SiShadcnui,
   SiExpress,
   SiPrisma,
   SiZod,
   SiIonic,
   SiAndroidstudio,
-  SiElectron,
   SiPostgresql,
   SiSupabase,
   SiMysql,
@@ -54,7 +52,6 @@ const stack: Record<string, Tech[]> = {
     { name: "JavaScript", icon: <SiJavascript /> },
     { name: "TailwindCSS", icon: <SiTailwindcss /> },
     { name: "shadcn/ui", icon: <SiShadcnui /> },
-    { name: "Vite", icon: <SiVite /> },
   ],
 
   Backend: [
@@ -66,12 +63,11 @@ const stack: Record<string, Tech[]> = {
     { name: "Zod", icon: <SiZod /> },
   ],
 
-  "Mobile & Desktop": [
+  Mobile: [
     { name: "Flutter", icon: <SiFlutter /> },
     { name: "Dart", icon: <SiDart /> },
     { name: "Ionic", icon: <SiIonic /> },
     { name: "Android Studio", icon: <SiAndroidstudio /> },
-    { name: "Electron", icon: <SiElectron /> },
   ],
 
   "Bases de datos": [

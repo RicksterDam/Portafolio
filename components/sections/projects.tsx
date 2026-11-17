@@ -7,7 +7,6 @@ import {
   ArrowUpRight,
   Bot,
   Calculator,
-  Gamepad2,
   Home,
   MessageCircle,
 } from "lucide-react";
@@ -90,21 +89,6 @@ const projects: Project[] = [
     icon: Calculator,
   },
   {
-    title: "GameMind CS2",
-    tag: "App de escritorio",
-    description:
-      "Aplicación de escritorio que detecta demos de Counter-Strike 2 y extrae estadísticas de la partida.",
-    longDescription:
-      "App de escritorio con Electron que vigila la carpeta de demos, las analiza automáticamente y muestra mapa, rondas, marcador, jugadores y kills en un dashboard.",
-    highlights: [
-      "Detección automática de nuevas demos",
-      "Análisis de rondas, marcador y kills",
-      "Dashboard en React dentro de Electron",
-    ],
-    stack: ["Electron", "React", "Vite", "Node.js"],
-    icon: Gamepad2,
-  },
-  {
     title: "Bot inmobiliario con ChatGPT",
     tag: "Chatbot",
     description:
@@ -152,35 +136,6 @@ const projects: Project[] = [
     imageFit: "logo",
     imageBg: "#faecdb",
     icon: Bot,
-  },
-  {
-    title: "Fraccionamiento · Casas",
-    tag: "Sitio web",
-    description:
-      "Sitio para un fraccionamiento con catálogo de casas y backend propio en Express y MySQL.",
-    longDescription:
-      "Sitio web para la venta de casas en un fraccionamiento, con páginas por modelo y un backend en Express conectado a MySQL.",
-    highlights: [
-      "Páginas por modelo de casa",
-      "API REST con Express y MySQL",
-    ],
-    stack: ["Node.js", "Express", "MySQL", "HTML", "CSS", "JavaScript"],
-    icon: Home,
-  },
-  {
-    title: "Bot de WhatsApp con flujos",
-    tag: "Chatbot",
-    description:
-      "Bot de WhatsApp con menú por pasos, paso a asesor humano y estado guardado en SQLite.",
-    longDescription:
-      "Bot conversacional para WhatsApp basado en flujos: guía al usuario por un menú, recuerda en qué paso va cada conversación y permite pasar a un asesor humano.",
-    highlights: [
-      "Flujo conversacional por pasos",
-      "Estado por usuario en SQLite",
-      "Paso a asesor humano",
-    ],
-    stack: ["Node.js", "Express", "SQLite", "WhatsApp"],
-    icon: MessageCircle,
   },
 ];
 
